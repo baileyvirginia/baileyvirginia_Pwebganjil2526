@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Pendaftaran Siswa</title>
+</head>
+<body>
+  <form >
+    <table width="700">
+      <tr>
+        <td><img src="igasar.png"width="100"/></td>
+        <th colspan="5" align="center">
+          <h2>FORMULIR PENDAFTARAN</h2>
+          <p>CALON SISWA/SISWI SMK IGASAR PINDAD BANDUNG<br>
+          TAHUN PELAJARAN 2026/2027</p>
+          <colspan="3" align="center">
+          <p>Sekertaria:jl.cisaranten kulon no 17   kode pos:40292<br>
+          Email:SmkIgasarPindadBandung gmail.com <br>
+        Wibsite:https://smkigasarpindad.com</p>
+        </th>
+      </tr>
+      <tr>
+        <td colspan="3"><b>A. DATA PRIBADI CALON SISWA</b></td>
+      </tr>
+      <tr>
+        <td>0. No Pendaftaran:</td>
+        <td colspan="2"><input type="number" name="nopendaftaran" size="50"></td>
+      </tr>
+        <td>1. Nama Lengkap</td>
+        <td colspan="2"><input type="text" name="nama" size="50"></td>
+      </tr>
+      <tr>
+        <td>2. Jenis Kelamin</td>
+        <td colspan="2">
+          <input type="radio" name="jk" value="Pria"> Pria
+          <input type="radio" name="jk" value="Wanita"> Wanita
+        </td>
+      </tr>
+      <tr>
+        <td>3. Tempat / Tgl Lahir</td>
+        <td><input type="text" name="tempat" size="25"></td>
+        <td><input type="date" name="tanggal"></td>
+      </tr>
+      <tr>
+        <td>4. Agama</td>
+        <td colspan="2">
+          <select name="agama">
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Buddha">Buddha</option>
+            <option value="Konghucu">Konghucu</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>5. Anak ke</td>
+        <td><input type="number" name="anakke" size="5"></td>
+        <td>dari <input type="number" name="jumlah_saudara" size="5"> bersaudara</td>
+      </tr>
+      <tr>
+        <td colspan="3"><b>B. DATA ORANG TUA / WALI</b></td>
+      </tr>
+      <tr>
+        <td>1. Nama Ayah</td>
+        <td colspan="2"><input type="text" name="ayah" size="50"></td>
+      </tr>
+      <tr>
+        <td>2. Pekerjaan Ayah</td>
+        <td colspan="2"><input type="text" name="kerja_ayah" size="40"></td>
+      </tr>
+      <tr>
+        <td>3. Nama Ibu</td>
+        <td colspan="2"><input type="text" name="ibu" size="50"></td>
+      </tr>
+      <tr>
+        <td>4. Pekerjaan Ibu</td>
+        <td colspan="2"><input type="text" name="kerja_ibu" size="40"></td>
+      </tr>
+      <tr>
+        <td>5. Alamat</td>
+        <td colspan="2"><textarea name="alamat" rows="3" cols="50"></textarea></td>
+      </tr>
+      <tr>
+        <td>6. Telp/HP</td>
+        <td colspan="2"><input type="text" name="telp" size="30"></td>
+      </tr>
+      <tr>
+        <td>7. Nama Wali</td>
+        <td colspan="2"><input type="text" name="wali" size="50"></td>
+      </tr>
+      <tr>
+        <td>8. Pekerjaan Wali</td>
+        <td colspan="2"><input type="text" name="kerja_wali" size="40"></td>
+      </tr>
+      <tr>
+        <td colspan="3"><b>C. ASAL SEKOLAH</b></td>
+      </tr>
+      <tr>
+        <td>1. Nama Sekolah</td>
+        <td colspan="2"><input type="text" name="asal_sekolah" size="50"></td>
+      </tr>
+      <tr>
+        <td>2. Alamat Sekolah</td>
+        <td colspan="2"><input type="text" name="alamat_sekolah" size="60"></td>
+      </tr>
+      <tr>
+        <td>3. Status Sekolah</td>
+        <td colspan="2">
+          <input type="radio" name="status_sekolah" value="Negeri"> Negeri
+          <input type="radio" name="status_sekolah" value="Swasta"> Swasta
+        </td>
+      </tr>
+      <tr>
+        <td>4. No Peserta Ujian SD</td>
+        <td colspan="2"><input type="text" name="no_ujian" size="40"></td>
+      </tr>
+      <tr>
+        <td colspan="3"><b>D. DATA SKHU / IJAZAH</b></td>
+      </tr>
+      <tr>
+        <td>1. Nomor SKHU*</td>
+        <td colspan="2"><input type="text" name="no_skhu" size="40"></td>
+      </tr>
+      <tr>
+        <td>2. Jumlah Nilai UN</td>
+        <td colspan="2"><input type="text" name="nilai_un" size="20"></td>
+      </tr>
+      <tr>
+        <td>3. Rata-rata UN</td>
+        <td colspan="2"><input type="text" name="rata_un" size="20"></td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+          <input type="reset" value="RESET">
+          <input type="submit" value="SUBMIT">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
