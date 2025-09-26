@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css4</title>
+    <style>
+       
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+            font-family: Arial, sans-serif; 
+            text-align: left;
+        }
+        thead th {
+            background-color: blue;   
+            color: white;             
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        tbody td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        
+        tbody tr:nth-child(even) {
+            background-color: #e6e6e6;
+        }
+
+        
+        tbody tr:hover {
+            background-color: #cce5ff; 
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>NIS</th>
+                <th>Nama Lengkap</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2324401</td>
+                <td>Muhammad Mirza</td>
+                <td>Garut</td>
+            </tr>
+            <tr>
+                <td>2324444</td>
+                <td>Dzimar Muhammad Rauhillah Farid</td>
+                <td>Banjar</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
