@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gatau</title>
+  <style>
+    body {
+      background-color: #007BFF; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px; 
+      background-color: #5fa3eb;
+      padding: 20px;
+      border: 3px solid #007BFF;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 0px; 
+    }
+
+    .box {
+      background-color: #d9ecff;
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 100px;
+    }
+
+    .box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column">
+      <div class="box"><img src="Kucing.jpeg" alt="Foto 1"></div>
+      <div class="box"><img src="igasar.png" alt="Foto 4"></div>
+      <div class="box"><img src="Kucing.jpeg" alt="Foto 7"></div>
+    </div>
+    <div class="column">
+      <div class="box"><img src="igasar.png" alt="Foto 2"></div>
+      <div class="box"><img src="Kucing.jpeg" alt="Foto 5"></div>
+      <div class="box"><img src="igasar.png" alt="Foto 8"></div>
+    </div>
+    <div class="column">
+      <div class="box"><img src="Kucing.jpeg" alt="Foto 3"></div>
+      <div class="box"><img src="igasar.png" alt="Foto 6"></div>
+      <div class="box"><img src="Kucing.jpeg" alt="Foto 9"></div>
+    </div>
+  </div>
+</body>
+</html>
