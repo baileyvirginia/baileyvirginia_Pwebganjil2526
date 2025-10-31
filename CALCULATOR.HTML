@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Membuat Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100px;
+            margin: 5px;
+            text-align: center;
+        }
+        button {
+            margin: 5px;
+            width: 40px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        function hitung(operasi) {
+            let bil1 = parseFloat(document.getElementById("bil1").value);
+            let bil2 = parseFloat(document.getElementById("bil2").value);
+            let hasil = 0;
+            let pesan = "";
+
+            if (isNaN(bil1) || isNaN(bil2)) {
+                alert("Masukkan kedua bilangan terlebih dahulu!");
+                return;
+            }
+
+            switch(operasi) {
+                case '+':
+                    hasil = bil1 + bil2;
+                    pesan = "Hasil Penjumlahan = " + hasil;
+                    break;
+                case '-':
+                    hasil = bil1 - bil2;
+                    pesan = "Hasil Pengurangan = " + hasil;
+                    break;
+                case '*':
+                    hasil = bil1 * bil2;
+                    pesan = "Hasil Perkalian = " + hasil;
+                    break;
+                case '/':
+                    if (bil2 === 0) {
+                        alert("Pembagian dengan nol tidak diperbolehkan!");
+                        return;
+                    }
+                    hasil = bil1 / bil2;
+                    pesan = "Hasil Pembagian = " + hasil;
+                    break;
+                case 'C':
+                    document.getElementById("bil1").value = "";
+                    document.getElementById("bil2").value = "";
+                    return;
+            }
+            alert(pesan);
+        }
+    </script>
+</head>
+<body>
+    <h2>Membuat Calculator</h2>
+    <p>Bilangan 1: <input type="text" id="bil1"></p>
+    <p>Bilangan 2: <input type="text" id="bil2"></p>
+
+    <button onclick="hitung('+')">+</button>
+    <button onclick="hitung('-')">-</button>
+    <button onclick="hitung('')">*</button>
+    <button onclick="hitung('/')">/</button>
+    <button onclick="hitung('C')">C</button>
+</body>
+</html>

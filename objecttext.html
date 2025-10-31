@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan dengan object text</title>
+</head>
+<body>
+    <script languange="javaScript">
+        function kirimDataDiri(){
+            var namastr=(document.fform.nama.value);
+            var alamatstr=(documument.fform.alamat.value);
+            document.fform.onama.value = namastr;
+            document.fform.oalamat.value = alamatstr;
+        }
+    </script>
+    <form name="fform">
+        <H1>memasukkan data dengan object teks</H1>
+        <hr>
+        <PRE>
+            nama anda : <input type="text" size="11" name="nama">
+            alamat    : <input type="text" size="25" name="alamat">
+        </PRE>
+        <BR>
+            <input type="button" value="kirim" onclick="kirimDataDiri()">
+            <input type="reset" value="ulang">
+            <H3>output</H3>
+            <PRE>
+                jadi nama anda adalah :<input type="text" size="11" name="onama">
+                alamat anda di         :<input type="text" size="25" name="oalamat">
+            </PRE>
+    </form>
+</body>
+</html>

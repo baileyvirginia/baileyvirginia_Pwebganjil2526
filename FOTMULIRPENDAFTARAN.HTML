@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Pendaftaran Calon Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table {
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 5px;
+        }
+        input[type="text"], textarea, select {
+            width: 200px;
+        }
+        fieldset {
+            width: 400px;
+        }
+        #hasil {
+            margin-top: 20px;
+            border-top: 1px solid #000;
+            padding-top: 15px;
+        }
+    </style>
+    <script>
+        function tampilkanData() {
+            // Ambil data dari form
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var asal = document.getElementById("asal").value;
+
+            var jurusan = "";
+            var checkboxes = document.getElementsByName("jurusan");
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    jurusan += checkboxes[i].value + " ";
+                }
+            }
+
+            var jenjang = "";
+            var radios = document.getElementsByName("jenjang");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    jenjang = radios[i].value;
+                }
+            }
+
+            // Tampilkan hasil di bawah form
+            document.getElementById("tNama").innerHTML = nama;
+            document.getElementById("tAlamat").innerHTML = alamat;
+            document.getElementById("tAsal").innerHTML = asal;
+            document.getElementById("tJurusan").innerHTML = jurusan;
+            document.getElementById("tJenjang").innerHTML = jenjang;
+        }
+    </script>
+</head>
+<body>
+    <h2>Formulir Pendaftaran Calon Mahasiswa Baru</h2>
+
+    <form onsubmit="event.preventDefault(); tampilkanData();">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>: <input type="text" id="nama"></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>: <input type="text" id="alamat"></td>
+            </tr>
+            <tr>
+                <td>Asal Sekolah</td>
+                <td>: 
+                    <select id="asal">
+                        <option value="SMA">SMA</option>
+                        <option value="SMK">SMK</option>
+                        <option value="MA">MA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Jurusan dipilih</td>
+                <td>:
+                    <input type="checkbox" name="jurusan" value="Teknik Informatika">Teknik Informatika<br>
+                    <input type="checkbox" name="jurusan" value="Manajemen Informatika">Manajemen Informatika
+                </td>
+            </tr>
+            <tr>
+                <td>Jenjang</td>
+                <td>:
+                    <input type="radio" name="jenjang" value="Diploma"> Diploma
+                    <input type="radio" name="jenjang" value="Sarjana"> Sarjana
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Kirim">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <div id="hasil">
+        <h3>Data yang Anda Masukkan:</h3>
+        <table>
+            <tr><td>Nama</td><td>: <span id="tNama"></span></td></tr>
+            <tr><td>Alamat</td><td>: <span id="tAlamat"></span></td></tr>
+            <tr><td>Asal Sekolah</td><td>: <span id="tAsal"></span></td></tr>
+            <tr><td>Jurusan</td><td>: <span id="tJurusan"></span></td></tr>
+            <tr><td>Jenjang</td><td>: <span id="tJenjang"></span></td></tr>
+        </table>
+    </div>
+</body>
+</html>
